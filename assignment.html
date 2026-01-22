@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechAdverse | Software & Hardware Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            letter-spacing: 4px;
+        }
+
+        .tagline {
+            margin: 15px 0 30px;
+            color: #9ca3af;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .primary {
+            background-color: #38bdf8;
+            color: #000;
+        }
+
+        .secondary {
+            background-color: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #020617;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            margin: 20px;
+        }
+
+        /* Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #020617;
+            padding: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Contact */
+        .contact p {
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #020617;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="home">
+    <h1 class="logo">TechAdverse</h1>
+    <p class="tagline">Software & Hardware Solutions for Modern Businesses</p>
+
+    <button class="btn primary">Get Started</button>
+    <button class="btn secondary">Our Services</button>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="stats">
+    <div class="stat-box">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat-box">
+        <h2>500+</h2>
+        <p>Clients</p>
+    </div>
+    <div class="stat-box">
+        <h2>99%</h2>
+        <p>System Uptime</p>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Software Services</h2>
+    <div class="grid">
+        <div class="card" onclick="notify()">Web & App Development</div>
+        <div class="card" onclick="notify()">AI & ML Solutions</div>
+        <div class="card" onclick="notify()">Cloud & DevOps</div>
+        <div class="card" onclick="notify()">Cybersecurity</div>
+    </div>
+</section>
+
+<section id="products">
+    <h2 class="section-title">Hardware Products</h2>
+    <div class="grid">
+        <div class="card">Servers & Workstations</div>
+        <div class="card">Networking Devices</div>
+        <div class="card">IoT Hardware</div>
+        <div class="card">Security Systems</div>
+    </div>
+</section>
+
+<section id="why">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="grid">
+        <div class="card">✔ Reliable Solutions</div>
+        <div class="card">✔ Expert Engineers</div>
+        <div class="card">✔ Secure Infrastructure</div>
+        <div class="card">✔ 24/7 Support</div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: vats.abhinav247@gmail.com</p>
+    <p>Phone: +91 9817831800</p>
+</section>
+
+<footer>
+    <p>© 2026 | Designed by <strong>Tanvi</strong> | UID: <strong>24BAI70143</strong></p>
+</footer>
+
+<script>
+    function notify() {
+        alert("Thank you for your interest! Our team will contact you soon.");
+    }
+</script>
+
+</body>
+</html>

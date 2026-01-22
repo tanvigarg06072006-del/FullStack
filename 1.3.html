@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #111;
+            color: white;
+        }
+
+        .header {
+            padding: 15px;
+            font-size: 22px;
+        }
+
+        button {
+            float: right;
+            padding: 5px 10px;
+            background-color: #f6f0d4;
+            border-radius: 10px;
+            
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .box1 {
+            border: 1px solid gray;
+            background-color: aquamarine;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+                .box2 {
+            border: 1px solid gray;
+            background-color: rgb(36, 122, 93);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+                .box3 {
+            border: 1px solid gray;
+            background-color: rgb(48, 78, 209);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+                .box {
+            border: 1px solid gray;
+            background-color: rgb(253, 35, 141);
+            color: white;
+            padding: 25px;
+            height: 500px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .nav {
+            grid-row: span 2;
+        }
+
+        .light {
+            background-color: rgb(255, 255, 255);
+            color: rgb(58, 56, 68);
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div class="header">
+        Admin Dashboard
+        <button onclick="changeTheme() ; changetag(); ">Light Mode</button>
+    </div>
+
+    <div class="dashboard">
+        <div class="box nav"> 
+           <h3> Navigation
+           </h3>
+
+        </div>  
+        <div class="box1"><h3>Analytics</h3></div>
+        <div class="box2"><h3>Users</h3></div>
+        <div class="box3"><h3>Settings</h3></div>
+    </div>
+
+    <script>
+        function changeTheme() {
+            document.getElementById("body").classList.toggle("light");
+        }
+
+        function changetag(){
+            document.getAnimations("button").AnimationEffect ("fadde")
+        }
+    </script>
+
+</body>
+</html>
