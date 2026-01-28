@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Table Generator</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    button {
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+
+    table {
+        width: 70%;
+        margin: auto;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .delete-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+    }
+
+    /* Alternate row colors */
+    tr:nth-child(even) {
+        background-color: #ddd;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fff;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Task 2: Dynamic Table Generator</h2>
+
+<div>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+    <input type="text" id="course" placeholder="Enter Course">
+    <button onclick="addRow()">Add Row</button>
+</div>
+
+<table id="studentTable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<script>
+    function addRow() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let course = document.getElementById("course").value;
+
+        if (name === "" || age === "" || course === "") {
+            alert("Please fill all fields!");
+            return;
+        }
+
+        let table = document.getElementById("studentTable");
+        let row = table.insertRow(-1);
+
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+
+        cell1.innerHTML = name;
+        cell2.innerHTML = age;
+        cell3.innerHTML = course;
+        cell4.innerHTML = `<button class="delete-btn" onclick="deleteRow(this)">Delete</button>`;
+
+        // Clear input fields
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("course").value = "";
+    }
+
+    function deleteRow(btn) {
+        let row = btn.parentNode.parentNode;
+        row.remove();
+    }
+</script>
+
+</body>
+</html>
