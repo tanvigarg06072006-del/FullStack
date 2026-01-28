@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Image Gallery</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        padding: 20px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .gallery {
+        width: 500px;
+        margin: auto;
+    }
+
+    .preview {
+        width: 100%;
+        height: 300px;
+        border: 2px solid #333;
+        margin-bottom: 15px;
+    }
+
+    .preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumbnails {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .thumbnails img {
+        width: 80px;
+        height: 60px;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: 0.3s;
+    }
+
+    .thumbnails img:hover {
+        opacity: 0.7;
+    }
+
+    .thumbnails img.active {
+        border: 3px solid blue;
+    }
+</style>
+</head>
+
+<body>
+<h1>UID : 24bai70132</h1>
+<h2>Task 1: Interactive Image Gallery</h2>
+
+
+<div class="gallery">
+
+    <!-- Large Preview Area -->
+    <div class="preview">
+        <img id="previewImage" src="https://picsum.photos/id/1015/500/300">
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+        <img src="https://picsum.photos/id/1015/500/300" class="active" onclick="changeImage(this)">
+        <img src="https://picsum.photos/id/1025/500/300" onclick="changeImage(this)">
+        <img src="https://picsum.photos/id/1035/500/300" onclick="changeImage(this)">
+        <img src="https://picsum.photos/id/1045/500/300" onclick="changeImage(this)">
+    </div>
+
+</div>
+
+<script>
+    function changeImage(clickedImage) {
+        // Change preview image
+        let preview = document.getElementById("previewImage");
+        preview.src = clickedImage.src;
+
+        // Remove active class from all thumbnails
+        let thumbnails = document.querySelectorAll(".thumbnails img");
+        thumbnails.forEach(img => img.classList.remove("active"));
+
+        // Add active class to clicked thumbnail
+        clickedImage.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
